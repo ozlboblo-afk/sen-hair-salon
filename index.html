@@ -1,286 +1,481 @@
 <!doctype html>
 <html lang="ja">
   <head>
+    <!-- ==== Basic ==== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>SEN HAIR SALON｜その人らしさを、美しくデザインする。</title>
+    <!-- ==== SEO ==== -->
+    <title>SEN HAIR SALON | あなたらしさが、いちばん美しい。</title>
     <meta
       name="description"
-      content="SEN HAIR SALONは、落ち着いた上質な空間で一人ひとりに寄り添うヘアデザインをご提案する美容室です。"
+      content="SEN HAIR SALONは、一人ひとりのライフスタイルに寄り添うヘアサロンです。カット・カラー・トリートメントまで、心地よい時間をご提供します。"
     />
 
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- ==== OGP ==== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SEN HAIR SALON" />
+    <meta
+      property="og:description"
+      content="あなたらしさが、いちばん美しい。"
+    />
+    <meta property="og:image" content="assets/img/ogp.png" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#2F241D" />
+
+    <!-- ==== Icons ==== -->
+    <link rel="icon" href="assets/icon/favicon.svg" type="image/svg+xml" />
+
+    <!-- ==== CSS ==== -->
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
-
-    <!-- googlefonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="theme-color" content="#181716" />
   </head>
 
   <body>
-    <div class="fv">
+    <div class="heroContainer">
       <!-- Header -->
-      <header class="header containerLg">
-        <div class="logo">
-          <h1>
-            <a href="/">
-              <span class="logoMain">SEN</span>
-              <span class="logoSub">HAIR SALON</span>
-            </a>
-          </h1>
-        </div>
+      <header class="header">
+        <a href="/" class="logo">
+          <h1 class="logoTitle">SEN</h1>
+          <span class="logoSub">HAIR SALON</span>
+        </a>
 
         <div class="headerMenu">
-          <nav>
+          <nav class="globalNav">
             <ul>
+              <!-- 以下はきれいに書き直す -->
               <li><a href="/">HOME</a></li>
-              <li><a href="/menu.html">MENU</a></li>
-              <li><a href="/style.html">STYLE</a></li>
-              <li><a href="/salon.html">SALON</a></li>
-              <li><a href="/access.html">ACCESS</a></li>
+              <li><a href="/">ABOUT</a></li>
+              <li><a href="menu.html">SERVICE</a></li>
+              <li><a href="style.html">STYLE</a></li>
+              <li><a href="salon.html">NEWS</a></li>
+              <li><a href="access.html">ACCESS</a></li>
             </ul>
           </nav>
 
-          <a href="/reserve.html" class="btn btnGhost">RESERVE</a>
+          <a href="/reserve.html" class="btnReserve">
+            <span class="btnReserveLabel">RESERVE</span>
+            <span class="btnReserveArrow"></span>
+          </a>
         </div>
-
-        <button class="hamburger" aria-label="menu">
-          <span class="hamburgerLine"></span>
-        </button>
       </header>
 
+      <!-- hamburger -->
+      <button class="hamburger" aria-label="menu">
+        <span class="hamburgerLine"></span>
+      </button>
+
       <!-- Hero -->
-      <section class="hero containerLg">
+      <section class="hero">
+        <picture class="visual heroImg">
+          <img src="assets/img/hero.webp" alt="ヒーロー画像" />
+        </picture>
+
         <div class="heroContent">
-          <h2>
-            その人らしさを、
+          <h2 class="heroTitle">
+            DESIGN
             <br />
-            美しくデザインする。
+            YOUR BEAUTY.
           </h2>
 
+          <p>あなたらしさが、いちばん美しい。</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- About -->
+    <section class="about">
+      <div class="visual aboutImg">
+        <img src="assets/img/footerVisual01.webp" alt="サロン店内" />
+      </div>
+
+      <div class="aboutCard">
+        <div class="visual aboutCardBg">
+          <img src="assets/img/footerVisual01.webp" alt="About画像" />
+        </div>
+
+        <div class="aboutContent">
+          <h2 class="sectionTitle">ABOUT SEN</h2>
           <p>
-            丁寧なカウンセリングと高い技術で
-            <br />
-            あなたに似合うスタイルをかなえます。
+            一人ひとりに寄り添い、ライフスタイルに合わせたヘアデザインをご提案します。落ち着いた空間で、特別なサロンタイムをお過ごしください。
           </p>
 
-          <a href="/reserve.html" class="btn btnPrimary">
-            RESERVE
+          <a href="" class="link linkAbout">
+            <span class="linkLabel">ABOUT</span>
+            <span class="linkArrow"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section class="service">
+      <div class="sectionHeader">
+        <h2 class="sectionTitle">SERVICE</h2>
+        <p class="sectionTitleJa">サービス内容</p>
+      </div>
+
+      <div class="serviceTabs">
+        <button class="active" data-tab="cut">
+          <span class="serviceIcon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
+              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="iconArrow"
+              aria-hidden="true"
             >
-              <path d="M18 8L22 12L18 16" />
-              <path d="M2 12H22" />
+              <circle cx="6" cy="6" r="3" />
+              <path d="M8.12 8.12 12 12" />
+              <path d="M20 4 8.12 15.88" />
+              <circle cx="6" cy="18" r="3" />
+              <path d="M14.8 14.8 20 20" />
             </svg>
-          </a>
-        </div>
-      </section>
-    </div>
+          </span>
+          <p>CUT</p>
+          <span>カット</span>
+        </button>
 
-    <!-- Coupon -->
-    <section class="coupon">
-      <div class="containerSm">
-        <div class="couponContent">
-          <p>FIRST VISIT</p>
-          <small>初めてのご来店の方限定</small>
-        </div>
+        <button data-tab="color">
+          <span class="serviceIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
+              />
+            </svg>
+          </span>
+          <p>COLOR</p>
+          <span>カラー</span>
+        </button>
 
-        <div class="couponDiscount">
-          <strong class="couponDiscountNumber">20</strong>
+        <button data-tab="perm">
+          <span class="serviceIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 2q2 2.5 0 5t0 5 0 5 0 5" />
+              <path d="M19 2q2 2.5 0 5t0 5 0 5 0 5" />
+              <path d="M5 2q2 2.5 0 5t0 5 0 5 0 5" />
+            </svg>
+          </span>
+          <p>PERM</p>
+          <span>パーマ</span>
+        </button>
 
-          <div class="couponDiscountText">
-            <span>CUT + COLOR</span>
-            <span>% OFF</span>
+        <button data-tab="treatment">
+          <span class="serviceIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M10.5 2v4" />
+              <path d="M14 2H7a2 2 0 0 0-2 2" />
+              <path
+                d="M19.29 14.76A6.67 6.67 0 0 1 17 11a6.6 6.6 0 0 1-2.29 3.76c-1.15.92-1.71 2.04-1.71 3.19 0 2.22 1.8 4.05 4 4.05s4-1.83 4-4.05c0-1.16-.57-2.26-1.71-3.19"
+              />
+              <path
+                d="M9.607 21H6a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h7V7a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"
+              />
+            </svg>
+          </span>
+          <p>TREATMENT</p>
+          <span>トリートメント</span>
+        </button>
+
+        <button data-tab="spa">
+          <span class="serviceIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m4 4 2.5 2.5" />
+              <path d="M13.5 6.5a4.95 4.95 0 0 0-7 7" />
+              <path d="M15 5 5 15" />
+              <path d="M14 17v.01" />
+              <path d="M10 16v.01" />
+              <path d="M13 13v.01" />
+              <path d="M16 10v.01" />
+              <path d="M11 20v.01" />
+              <path d="M17 14v.01" />
+              <path d="M20 11v.01" />
+            </svg>
+          </span>
+          <p>HEAD SPA</p>
+          <span>ヘッドスパ</span>
+        </button>
+      </div>
+
+      <div class="serviceContents">
+        <article class="servicePanel active" data-panel="cut">
+          <div class="visual servicePanelImg">
+            <img src="assets/img/salonGallery01.webp" alt="カット画像" />
           </div>
-        </div>
 
-        <div class="couponSide">
-          <div class="couponDeadline">
-            <p>2026.08.31まで</p>
-            <small>WEBを見たとお伝えください</small>
+          <div class="servicePanelContent">
+            <h3>CUT</h3>
+            <span>カット</span>
+
+            <p>骨格や髪質を見極め、あなたに似合うスタイルをご提案します。</p>
+
+            <p class="price">￥5,500～</p>
+            <small>※シャンプー・ブロー込</small>
           </div>
 
-          <div class="couponAction">
-            <a href="/coupon.html" class="btn btnGhost">クーポン一覧</a>
+          <div class="visual servicePanelSubImage">
+            <img src="assets/img/salonGallery01.webp" alt="カットイメージ" />
           </div>
-        </div>
+        </article>
+
+        <article class="servicePanel" data-panel="color">
+          <div class="visual servicePanelImg">
+            <img src="assets/img/salonGallery01.webp" alt="カラー施術画像" />
+          </div>
+
+          <div class="servicePanelContent">
+            <h3>COLOR</h3>
+            <span>カラー</span>
+
+            <p>
+              肌や雰囲気に合わせたカラーをご提案。透明感のある艶やかな髪へ導きます。
+            </p>
+
+            <p class="price">￥7,700～</p>
+            <small>※シャンプー・ブロー込</small>
+          </div>
+
+          <div class="visual servicePanelSubImage">
+            <img src="assets/img/salonGallery01.webp" alt="カラーイメージ" />
+          </div>
+        </article>
+
+        <article class="servicePanel" data-panel="perm">
+          <div class="visual servicePanelImg">
+            <img src="assets/img/salonGallery01.webp" alt="パーマ施術画像" />
+          </div>
+
+          <div class="servicePanelContent">
+            <h3>PERM</h3>
+            <span>パーマ</span>
+
+            <p>
+              ナチュラルからトレンドまで、毎日のスタイリングが楽しくなるデザインをご提案します。
+            </p>
+
+            <p class="price">￥8,800～</p>
+            <small>※シャンプー・ブロー込</small>
+          </div>
+
+          <div class="visual servicePanelSubImage">
+            <img src="assets/img/salonGallery01.webp" alt="パーマイメージ" />
+          </div>
+        </article>
+
+        <article class="servicePanel" data-panel="treatment">
+          <div class="visual servicePanelImg">
+            <img
+              src="assets/img/salonGallery01.webp"
+              alt="トリートメント施術画像"
+            />
+          </div>
+
+          <div class="servicePanelContent">
+            <h3>TREATMENT</h3>
+            <span>トリートメント</span>
+
+            <p>
+              ダメージを補修し、指通りの良いしなやかな髪へ。髪質に合わせてご提案します。
+            </p>
+
+            <p class="price">￥4,400～</p>
+            <small>※単品の場合ブロー料金別</small>
+          </div>
+
+          <div class="visual servicePanelSubImage">
+            <img
+              src="assets/img/salonGallery01.webp"
+              alt="トリートメントイメージ"
+            />
+          </div>
+        </article>
+
+        <article class="servicePanel" data-panel="spa">
+          <div class="visual servicePanelImg">
+            <img
+              src="assets/img/salonGallery01.webp"
+              alt="ヘッドスパ施術画像"
+            />
+          </div>
+
+          <div class="servicePanelContent">
+            <h3>HEAD SPA</h3>
+            <span>ヘッドスパ</span>
+
+            <p>
+              心地よいマッサージで頭皮環境を整え、心も身体もリラックスできる時間をご提供します。
+            </p>
+
+            <p class="price">￥4,950～</p>
+            <small>※単品の場合ブロー料金別</small>
+          </div>
+
+          <div class="visual servicePanelSubImage">
+            <img
+              src="assets/img/salonGallery01.webp"
+              alt="ヘッドスパイメージ"
+            />
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- Style -->
-    <section class="style containerLg">
-      <div class="sectionTitle">
-        <h2>STYLE</h2>
-        <a href="/style.html" class="link linkPlain">View More →</a>
+    <section class="style">
+      <div class="styleHeader">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">STYLE</h2>
+          <p class="sectionTitleJa">スタイルギャラリー</p>
+        </div>
+
+        <a href="" class="link linkPlain">
+          <span class="linkLabel">VIEW MORE</span>
+          <span class="linkArrow"></span>
+        </a>
       </div>
 
-      <div class="styleGrid">
-        <article class="styleCard">
-          <img src="assets/img/naturalLong01.webp" alt="Natural long" />
-          <h3>Natural long</h3>
-        </article>
-
-        <article class="styleCard">
-          <img src="assets/img/layerBob01.webp" alt="Layer bob" />
-          <h3>Layer bob</h3>
-        </article>
-
-        <article class="styleCard">
-          <img src="assets/img/medium01.webp" alt="Medium" />
-          <h3>Medium</h3>
-        </article>
-
-        <article class="styleCard">
-          <img src="assets/img/short01.webp" alt="Short" />
-          <h3>Short</h3>
-        </article>
-
-        <article class="styleCard">
-          <img src="assets/img/mens01.webp" alt="Men's" />
-          <h3>Men's</h3>
-        </article>
-      </div>
+      <ul class="styleGrid">
+        <li>
+          <div class="visual">
+            <img src="assets/img/layerBob01.webp" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="visual">
+            <img src="assets/img/layerBob01.webp" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="visual">
+            <img src="assets/img/layerBob01.webp" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="visual">
+            <img src="assets/img/layerBob01.webp" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="visual">
+            <img src="assets/img/layerBob01.webp" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="visual">
+            <img src="assets/img/layerBob01.webp" alt="" />
+          </div>
+        </li>
+      </ul>
     </section>
 
-    <!-- Grid Area -->
-    <section class="infoGrid">
-      <!-- Menu -->
-      <article class="menuContainer">
-        <h2>MENU</h2>
+    <div class="infoSection">
+      <!-- News -->
+      <section class="news">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">NEWS</h2>
+          <p class="sectionTitleJa">お知らせ</p>
+        </div>
 
         <ul>
           <li>
-            <span class="menuNameEn">CUT</span>
-
-            <div class="menuInfo">
-              <span>カット</span>
-              <span>¥8,000</span>
-            </div>
+            <time>2026.07.01</time>
+            <p>夏季休業のお知らせ</p>
           </li>
 
           <li>
-            <span class="menuNameEn">COLOR</span>
-
-            <div class="menuInfo">
-              <span>カラー</span>
-              <span>¥8,000〜</span>
-            </div>
+            <time>2026.06.28</time>
+            <p>新メニュー「クイックトリートメント」開始</p>
           </li>
 
           <li>
-            <span class="menuNameEn">PERM</span>
-
-            <div class="menuInfo">
-              <span>パーマ</span>
-              <span>¥8,000〜</span>
-            </div>
-          </li>
-
-          <li>
-            <span class="menuNameEn">TREATMENT</span>
-
-            <div class="menuInfo">
-              <span>トリートメント</span>
-              <span>¥5,000〜</span>
-            </div>
-          </li>
-
-          <li>
-            <span class="menuNameEn">HEAD SPA</span>
-
-            <div class="menuInfo">
-              <span>ヘッドスパ</span>
-              <span>¥4,000〜</span>
-            </div>
+            <time>2026.06.20</time>
+            <p>カラーキャンペーンのお知らせ</p>
           </li>
         </ul>
 
-        <a href="/menu.html" class="link linkUnderline">VIEW ALL →</a>
-      </article>
-
-      <!-- Salon -->
-      <article class="salonContainer">
-        <p class="salonBgText">
-          LIGHT
-          <br />
-          SHAPES
-          <br />
-          BEAUTY
-        </p>
-
-        <div class="salonContent">
-          <h2>SALON</h2>
-
-          <p>
-            光と影が調和する、
-            <br />
-            落ち着いた上質な空間で
-            <br />
-            心まで満たされる時間を。
-          </p>
-
-          <a href="/salon.html" class="link linkUnderline">VIEW ALL →</a>
+        <div class="visual newsVisual">
+          <img src="assets/img/layerBob01.webp" />
         </div>
 
-        <div class="salonImage">
-          <img src="assets/img/salonVisual.webp" alt="" />
-        </div>
-      </article>
-
-      <!-- News -->
-      <article class="newsContainer">
-        <h2>NEWS</h2>
-
-        <ul class="newsList">
-          <li class="newsItem">
-            <time class="newsDate" datetime="2026-04-01">2026.04.01</time>
-            <span class="newsTitle">春のキャンペーン開始</span>
-          </li>
-
-          <li class="newsItem">
-            <time class="newsDate" datetime="2026-03-30">2026.03.30</time>
-            <span class="newsTitle">新スタッフ加入</span>
-          </li>
-
-          <li class="newsItem">
-            <time class="newsDate" datetime="2026-02-20">2026.02.20</time>
-            <span class="newsTitle">価格改定のお知らせ</span>
-          </li>
-        </ul>
-
-        <a href="/news.html" class="link linkUnderline">VIEW ALL →</a>
-      </article>
+        <a href="" class="link linkPlain">
+          <span class="linkLabel">VIEW ALL</span>
+          <span class="linkArrow"></span>
+        </a>
+      </section>
 
       <!-- Access -->
-      <article class="accessContainer">
+      <section class="access">
         <div class="accessContent">
-          <h2>ACCESS</h2>
+          <div class="sectionHeader">
+            <h2 class="sectionTitle">ACCESS</h2>
+            <p class="sectionTitleJa">アクセス</p>
+          </div>
 
-          <address>
-            〒150-0001
-            <br />
-            東京都渋谷区神宮前1-2-3 ○○ビル 2F
-            <br />
-            TEL : 03-1234-5678
-            <br />
-            OPEN：10:00 - 20:00
-            <br />
-            （定休日：火曜日）
+          <address class="accessAddress">
+            <dl>
+              <dt>ADDRESS</dt>
+              <dd>
+                〒150-0001
+                <br />
+                東京都渋谷区神宮前1-2-3 ○○ビル2F
+              </dd>
+
+              <dt>ACCESS</dt>
+              <dd>JR「原宿駅」徒歩6分</dd>
+
+              <dt>TEL</dt>
+              <dd>03-1234-5678</dd>
+
+              <dt>OPEN</dt>
+              <dd>10:00〜20:00（火曜定休）</dd>
+            </dl>
           </address>
 
-          <a href="/access.html" class="link linkUnderline">VIEW ALL →</a>
+          <a href="" class="link linkPlain">
+            <span class="linkLabel">Google MAP</span>
+            <span class="linkArrow"></span>
+          </a>
         </div>
 
         <iframe
@@ -290,73 +485,117 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-      </article>
+      </section>
+    </div>
+
+    <section class="reserve">
+      <div class="sectionHeader">
+        <h2 class="sectionTitle">RESERVE</h2>
+        <p class="sectionTitleJa">ご予約は次の方法から承っております。</p>
+      </div>
+
+      <div class="reserveButtons">
+        <a href="#" class="reserveButton">
+          <img src="assets/icon/monitor.svg" alt="" />
+          <span>WEBで予約する</span>
+        </a>
+
+        <a href="#" class="reserveButton">
+          <img src="assets/icon/ri--line-fill.svg" alt="" />
+          <span>LINEで予約する</span>
+        </a>
+
+        <a href="#" class="reserveButton reserveButtonPhone">
+          <img src="assets/icon/phone.svg" alt="" />
+
+          <div class="reserveButtonBody">
+            <span>TELで予約する</span>
+            <strong>03-1234-5678</strong>
+          </div>
+        </a>
+      </div>
+
+      <div class="visual">
+        <img src="assets/img/layerBob01.webp" alt="" />
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer containerLg">
-      <div class="footerTop">
-        <div class="footerMain">
-          <a href="/" class="footerLogo">
-            <h2>SEN</h2>
+    <footer class="footer">
+      <div class="footerMain">
+        <div class="footerBrand">
+          <a href="/" class="logo">
+            <span class="logoTitle">SEN</span>
             <span class="logoSub">HAIR SALON</span>
           </a>
+          <ul class="footerSubNav">
+            <li><a href="/privacy.html">プライバシーポリシー</a></li>
+            <li><a href="/recruit.html">採用情報</a></li>
+            <li><a href="/faq.html">よくある質問</a></li>
+          </ul>
+        </div>
 
-          <div class="instagramContent">
-            <div class="instagramInfo">
-              <p>Follow us on Instagram</p>
-              <p>@sen_hairsalon</p>
-            </div>
+        <nav class="footerNav">
+          <ul>
+            <!-- 以下はきれいに書き直す -->
+            <li><a href="/">HOME</a></li>
+            <li><a href="/">ABOUT</a></li>
+            <li><a href="/menu.html">SERVICE</a></li>
+            <li><a href="/style.html">STYLE</a></li>
+            <li><a href="/salon.html">NEWS</a></li>
+            <li><a href="/access.html">ACCESS</a></li>
+          </ul>
+        </nav>
+      </div>
 
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="instagramIcon"
-            >
+      <div class="footerBottom">
+        <small>© 2026 SEN HAIR SALON.</small>
+
+        <ul class="snsList">
+          <li>
+            <a href="">
               <svg
+                class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
                 viewBox="0 0 24 24"
               >
-                <path d="M0 0h24v24H0z" fill="none" />
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
+                <g fill="none">
                   <path
-                    d="M3 12c0-4.243 0-6.364 1.318-7.682S7.758 3 12 3s6.364 0 7.682 1.318S21 7.758 21 12s0 6.364-1.318 7.682S16.242 21 12 21s-6.364 0-7.682-1.318S3 16.242 3 12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
                   />
-                  <path
-                    d="M16 12a4 4 0 1 1-8 0a4 4 0 0 1 8 0m1.375-5.25h-.125m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0"
+                  <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="2"
                   />
                 </g>
               </svg>
             </a>
-          </div>
-        </div>
-
-        <div class="instagramGallery">
-          <img src="assets/img/footerVisual01.webp" alt="" />
-          <img src="assets/img/footerVisual02.webp" alt="" />
-          <img src="assets/img/footerVisual03.webp" alt="" />
-          <img src="assets/img/footerVisual04.webp" alt="" />
-          <img src="assets/img/footerVisual05.webp" alt="" />
-        </div>
-      </div>
-
-      <div class="footerBottom">
-        <a href="/privacy.html">プライバシーポリシー</a>
-        <a href="/recruit.html">採用情報</a>
-        <a href="/faq.html">よくある質問</a>
-
-        <small>© 2026 SEN HAIR SALON.</small>
+          </li>
+          <li>
+            <a href="">
+              <svg
+                class="snsIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M18.664 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.463a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.526.526 0 0 1-.002 1.05h-1.463v.938h1.463c.29 0 .524.237.524.525m-4.098 2.485a.5.5 0 0 1-.166.025a.52.52 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.52.52 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525c.287 0 .525.238.525.525v3.976a.52.52 0 0 1-.36.497m-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.235-.525.525-.525c.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524m-1.53 0H6.099a.53.53 0 0 1-.525-.524V8.852c0-.287.238-.525.525-.525c.29 0 .525.238.525.525v3.45h1.464a.525.525 0 0 1 0 1.05m3.915-10.78c-5.513 0-10 3.643-10 8.118c0 4.01 3.558 7.369 8.363 8.007c.325.068.769.215.881.492c.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537c1.076-.449 5.764-3.398 7.864-5.812C21.314 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
-    <script src="/js/hamburger.js"></script>
+
+    <script src="js/servicePanel.js"></script>
+    <script src="js/hamburger.js"></script>
   </body>
 </html>
