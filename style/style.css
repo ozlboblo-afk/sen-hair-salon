@@ -1097,7 +1097,7 @@ Style.html
 .styleCategory button.is-active::before {
   background: var(--color-primary);
 }
-.styleGrid {
+.stylePage .styleGrid {
   display: grid;
   gap: var(--space-xl);
   grid-template-columns: repeat(3, 1fr);
