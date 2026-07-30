@@ -42,30 +42,42 @@
           <span class="logoSub">HAIR SALON</span>
         </a>
 
+        <button
+          class="drawerButton"
+          aria-label="メニュー"
+          aria-expanded="false"
+          aria-controls="sidebar"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <div class="headerMenu">
           <nav class="globalNav">
             <ul>
-              <!-- 以下はきれいに書き直す -->
               <li><a href="/">HOME</a></li>
-              <li><a href="/">ABOUT</a></li>
-              <li><a href="menu.html">SERVICE</a></li>
-              <li><a href="style.html">STYLE</a></li>
-              <li><a href="salon.html">NEWS</a></li>
-              <li><a href="access.html">ACCESS</a></li>
+              <li><a href="/about.html">ABOUT</a></li>
+              <li><a href="/menu.html">MENU</a></li>
+              <li><a href="/style.html">STYLE</a></li>
+              <li><a href="/access.html">ACCESS</a></li>
             </ul>
           </nav>
 
-          <a href="/reserve.html" class="btnReserve">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btnReserve"
+          >
             <span class="btnReserveLabel">RESERVE</span>
             <span class="btnReserveArrow"></span>
           </a>
         </div>
       </header>
 
-      <!-- hamburger -->
-      <button class="hamburger" aria-label="menu">
-        <span class="hamburgerLine"></span>
-      </button>
+      <!-- 背景 -->
+      <div class="drawerOverlay"></div>
 
       <!-- Hero -->
       <section class="hero">
@@ -93,7 +105,7 @@
 
       <div class="aboutContent">
         <h2 class="sectionTitle">ABOUT SEN</h2>
-        <p>
+        <p class="sectionSub">
           一人ひとりに寄り添い、ライフスタイルに合わせたヘアデザインをご提案します。落ち着いた空間で、特別なサロンタイムをお過ごしください。
         </p>
 
@@ -108,7 +120,7 @@
     <section class="service">
       <div class="sectionHeader">
         <h2 class="sectionTitle">SERVICE</h2>
-        <p class="sectionTitleJa">サービス内容</p>
+        <p class="sectionSub">サービス内容</p>
       </div>
 
       <div class="serviceTabs">
@@ -299,7 +311,10 @@
 
         <article class="servicePanel" data-panel="treatment">
           <div class="visual servicePanelImg">
-            <img src="" alt="トリートメント施術画像" />
+            <img
+              src="assets/img/service-treatment.jpg"
+              alt="トリートメント施術画像"
+            />
           </div>
 
           <div class="servicePanelContent">
@@ -354,7 +369,7 @@
       <div class="styleHeader">
         <div class="sectionHeader">
           <h2 class="sectionTitle">STYLE</h2>
-          <p class="sectionTitleJa">スタイルギャラリー</p>
+          <p class="sectionSub">スタイルギャラリー</p>
         </div>
 
         <a href="" class="link linkPlain">
@@ -400,36 +415,33 @@
     <div class="infoSection">
       <!-- News -->
       <section class="news">
-        <div class="sectionHeader">
-          <h2 class="sectionTitle">NEWS</h2>
-          <p class="sectionTitleJa">お知らせ</p>
+        <div class="newsContent">
+          <div class="sectionHeader">
+            <h2 class="sectionTitle">NEWS</h2>
+            <p class="sectionSub">お知らせ</p>
+          </div>
+
+          <ul>
+            <li>
+              <time>2026.07.01</time>
+              <p>夏季休業のお知らせ</p>
+            </li>
+
+            <li>
+              <time>2026.06.28</time>
+              <p>新メニュー「クイックトリートメント」開始</p>
+            </li>
+
+            <li>
+              <time>2026.06.20</time>
+              <p>カラーキャンペーンのお知らせ</p>
+            </li>
+          </ul>
         </div>
-
-        <ul>
-          <li>
-            <time>2026.07.01</time>
-            <p>夏季休業のお知らせ</p>
-          </li>
-
-          <li>
-            <time>2026.06.28</time>
-            <p>新メニュー「クイックトリートメント」開始</p>
-          </li>
-
-          <li>
-            <time>2026.06.20</time>
-            <p>カラーキャンペーンのお知らせ</p>
-          </li>
-        </ul>
 
         <div class="visual newsVisual">
           <img src="assets/img/news.jpg" />
         </div>
-
-        <a href="" class="link linkPlain">
-          <span class="linkLabel">VIEW ALL</span>
-          <span class="linkArrow"></span>
-        </a>
       </section>
 
       <!-- Access -->
@@ -437,7 +449,7 @@
         <div class="accessContent">
           <div class="sectionHeader">
             <h2 class="sectionTitle">ACCESS</h2>
-            <p class="sectionTitleJa">アクセス</p>
+            <p class="sectionSub">アクセス</p>
           </div>
 
           <address class="accessAddress">
@@ -466,43 +478,34 @@
           </a>
         </div>
 
-        <iframe
-          class="accessMap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6482.442454589242!2d139.70006654670485!3d35.671554356199664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cbb411ee357%3A0xf9fb6491ae3b9ec7!2z44CSMTUwLTAwMDEg5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmN77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1781223166907!5m2!1sja!2sjp"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div class="visual accessMapWrap">
+          <iframe
+            class="accessMap"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6482.442454589242!2d139.70006654670485!3d35.671554356199664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cbb411ee357%3A0xf9fb6491ae3b9ec7!2z44CSMTUwLTAwMDEg5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmN77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1781223166907!5m2!1sja!2sjp"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
     </div>
 
-    <section class="reserve">
-      <div class="reserveInner">
-        <div class="sectionHeader">
-          <h2 class="sectionTitle">RESERVE</h2>
-          <p class="sectionTitleJa">ご予約は次の方法から承っております。</p>
-        </div>
+    <section class="reserveCta">
+      <div class="reserveCtaInner">
+        <p class="reserveCtaSub">Ready for your visit?</p>
 
-        <div class="reserveButtons">
-          <a href="#" class="reserveButton">
-            <img src="assets/icon/monitor.svg" alt="" />
-            <span>WEBで予約する</span>
-          </a>
+        <h2 class="reserveCtaTitle">Reserve Your Appointment</h2>
 
-          <a href="#" class="reserveButton">
-            <img src="assets/icon/ri--line-fill.svg" alt="" />
-            <span>LINEで予約する</span>
-          </a>
+        <p class="reserveCtaText">WEB予約は24時間受け付けております。</p>
 
-          <a href="#" class="reserveButton reserveButtonPhone">
-            <img src="assets/icon/phone.svg" alt="" />
-
-            <div class="reserveButtonBody">
-              <span>TELで予約する</span>
-              <strong>03-1234-5678</strong>
-            </div>
-          </a>
-        </div>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btnPrimary"
+        >
+          Reserve Now
+        </a>
       </div>
     </section>
 
@@ -513,21 +516,15 @@
           <span class="logoTitle">SEN</span>
           <span class="logoSub">HAIR SALON</span>
         </a>
-        <ul class="footerSubNav">
-          <li><a href="/privacy.html">プライバシーポリシー</a></li>
-          <li><a href="/recruit.html">採用情報</a></li>
-          <li><a href="/faq.html">よくある質問</a></li>
-        </ul>
       </div>
 
       <nav class="footerNav">
         <ul>
           <!-- 以下はきれいに書き直す -->
           <li><a href="/">HOME</a></li>
-          <li><a href="/">ABOUT</a></li>
-          <li><a href="/menu.html">SERVICE</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/menu.html">MENU</a></li>
           <li><a href="/style.html">STYLE</a></li>
-          <li><a href="/salon.html">NEWS</a></li>
           <li><a href="/access.html">ACCESS</a></li>
         </ul>
       </nav>
@@ -577,11 +574,17 @@
           </li>
         </ul>
 
+        <ul class="footerSubNav">
+          <li><a href="/privacy.html">プライバシーポリシー</a></li>
+          <li><a href="/recruit.html">採用情報</a></li>
+          <li><a href="/faq.html">よくある質問</a></li>
+        </ul>
+
         <small>© 2026 SEN HAIR SALON.</small>
       </div>
     </footer>
 
     <script src="js/servicePanel.js"></script>
-    <script src="js/hamburger.js"></script>
+    <script src="js/drawer.js"></script>
   </body>
 </html>

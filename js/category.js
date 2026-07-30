@@ -1,18 +1,23 @@
-const tabs = document.querySelectorAll(".styleCategory button");
-const cards = document.querySelectorAll(".stylePageCard");
+const categoryButtons = document.querySelectorAll(".styleCategory button");
+const styleItems = document.querySelectorAll(".styleItem");
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const category = tab.dataset.category;
+categoryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    categoryButtons.forEach((btn) => {
+      btn.classList.remove("is-active");
+    });
 
-    tabs.forEach((t) => t.classList.remove("is-active"));
-    tab.classList.add("is-active");
+    button.classList.add("is-active");
 
-    cards.forEach((card) => {
-      if (category === "all" || card.dataset.category === category) {
-        card.style.display = "block";
+    const filter = button.dataset.filter;
+
+    styleItems.forEach((item) => {
+      const category = item.dataset.category;
+
+      if (filter === "all" || category === filter) {
+        item.style.display = "";
       } else {
-        card.style.display = "none";
+        item.style.display = "none";
       }
     });
   });

@@ -25,206 +25,262 @@
 
   <body>
     <!-- Header -->
-    <header class="header containerLg">
+    <header class="header">
       <a href="/" class="logo">
-        <span class="logoMain">SEN</span>
+        <h1 class="logoTitle">SEN</h1>
         <span class="logoSub">HAIR SALON</span>
       </a>
 
+      <button
+        class="drawerButton"
+        aria-label="メニュー"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="headerMenu">
-        <nav>
+        <nav class="globalNav">
           <ul>
             <li><a href="/">HOME</a></li>
+            <li><a href="/about.html">ABOUT</a></li>
             <li><a href="/menu.html">MENU</a></li>
             <li><a href="/style.html">STYLE</a></li>
-            <li><a href="/salon.html">SALON</a></li>
             <li><a href="/access.html">ACCESS</a></li>
           </ul>
         </nav>
 
-        <a href="/reserve.html" class="btn btnGhost">RESERVE</a>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btnReserve"
+        >
+          <span class="btnReserveLabel">RESERVE</span>
+          <span class="btnReserveArrow"></span>
+        </a>
       </div>
-
-      <button class="hamburger" aria-label="menu">
-        <span class="hamburgerLine"></span>
-      </button>
     </header>
 
-    <main class="stylePage container">
-      <section class="pageHeader">
-        <h1>STYLE</h1>
-        <p>スタイル</p>
-      </section>
+    <main class="page stylePage">
+      <div class="pageInner">
+        <section class="pageHeader">
+          <h1 class="sectionTitle">STYLE</h1>
+          <p class="sectionSub">スタイル</p>
+        </section>
 
-      <nav class="styleCategory" aria-label="スタイルカテゴリー">
-        <button class="styleTab is-active" data-category="all">ALL</button>
-        <button class="styleTab" data-category="long">LONG</button>
-        <button class="styleTab" data-category="medium">MEDIUM</button>
-        <button class="styleTab" data-category="short">SHORT</button>
-        <button class="styleTab" data-category="men's">MEN'S</button>
-      </nav>
+        <section class="pageCard">
+          <div class="styleContent">
+            <aside class="styleSidebar">
+              <h2 class="styleHeading">Hair Collection</h2>
 
-      <section class="stylePageGrid">
-        <article class="stylePageCard" data-category="long">
-          <img src="/assets/img/layerBob02.webp" alt="Layer bob" />
-          <h3>Layer bob</h3>
-        </article>
+              <p class="styleLead">
+                お客様一人ひとりの髪質や雰囲気に合わせた
+                スタイルをご提案いたします。
+              </p>
 
-        <article class="stylePageCard" data-category="medium">
-          <img src="/assets/img/medium01.webp" alt="Medium" />
-          <h3>Medium</h3>
-        </article>
+              <nav class="styleCategory">
+                <button class="is-active" data-filter="all">ALL</button>
+                <button data-filter="short">SHORT</button>
+                <button data-filter="bob">BOB</button>
+                <button data-filter="medium">MEDIUM</button>
+                <button data-filter="long">LONG</button>
+                <button data-filter="men's">MEN'S</button>
+              </nav>
+            </aside>
 
-        <article class="stylePageCard" data-category="long">
-          <img src="/assets/img/naturalLong01.webp" alt="Natural long" />
-          <h3>Natural long</h3>
-        </article>
+            <div class="styleGrid">
+              <article class="styleItem visual" data-category="long">
+                <img src="assets/img/style-01.jpg" alt="" />
 
-        <article class="stylePageCard" data-category="medium">
-          <img src="/assets/img/layerBob01.webp" alt="Layer bob" />
-          <h3>Layer bob</h3>
-        </article>
+                <div class="styleOverlay">
+                  <h3>Long</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
 
-        <article class="stylePageCard" data-category="men's">
-          <img src="/assets/img/mens01.webp" alt="Men's" />
-          <h3>Men's</h3>
-        </article>
+              <article class="styleItem visual" data-category="short">
+                <img src="assets/img/style-02.jpg" alt="" />
 
-        <article class="stylePageCard" data-category="men's">
-          <img src="/assets/img/mens02.webp" alt="Men's" />
-          <h3>Men's</h3>
-        </article>
+                <div class="styleOverlay">
+                  <h3>short</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
 
-        <article class="stylePageCard" data-category="short">
-          <img src="/assets/img/short03.webp" alt="Short" />
-          <h3>Short</h3>
-        </article>
+              <article class="styleItem visual" data-category="short">
+                <img src="assets/img/style-03.jpg" alt="" />
 
-        <article class="stylePageCard" data-category="medium">
-          <img src="/assets/img/layerBob03.webp" alt="Layer bob" />
-          <h3>Layer bob</h3>
-        </article>
+                <div class="styleOverlay">
+                  <h3>short</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
 
-        <article class="stylePageCard" data-category="short">
-          <img src="/assets/img/short04.webp" alt="Short" />
-          <h3>Short</h3>
-        </article>
+              <article class="styleItem visual" data-category="bob">
+                <img src="assets/img/style-04.jpg" alt="" />
 
-        <article class="stylePageCard" data-category="medium">
-          <img src="/assets/img/medium02.webp" alt="Medium" />
-          <h3>Medium</h3>
-        </article>
+                <div class="styleOverlay">
+                  <h3>Bob</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
 
-        <article class="stylePageCard" data-category="men's">
-          <img src="/assets/img/mens04.webp" alt="Men's" />
-          <h3>Men's</h3>
-        </article>
+              <article class="styleItem visual" data-category="medium">
+                <img src="assets/img/style-05.jpg" alt="" />
 
-        <article class="stylePageCard" data-category="long">
-          <img src="/assets/img/naturalLong02.webp" alt="Natural long" />
-          <h3>Natural long</h3>
-        </article>
+                <div class="styleOverlay">
+                  <h3>Medium</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
 
-        <article class="stylePageCard" data-category="short">
-          <img src="/assets/img/short01.webp" alt="Short" />
-          <h3>Short</h3>
-        </article>
+              <article class="styleItem visual" data-category="short">
+                <img src="assets/img/style-06.jpg" alt="" />
 
-        <article class="stylePageCard" data-category="short">
-          <img src="/assets/img/short02.webp" alt="Short" />
-          <h3>Short</h3>
-        </article>
+                <div class="styleOverlay">
+                  <h3>short</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
 
-        <article class="stylePageCard" data-category="men's">
-          <img src="/assets/img/mens03.webp" alt="Men's" />
-          <h3>Men's</h3>
-        </article>
-      </section>
+              <article class="styleItem visual" data-category="medium">
+                <img src="assets/img/style-07.jpg" alt="" />
 
-      <div class="pageAction">
-        <a href="/reserve.html" class="btn btnGhost">RESERVE →</a>
+                <div class="styleOverlay">
+                  <h3>Medium</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
+
+              <article class="styleItem visual" data-category="men's">
+                <img src="assets/img/style-08.jpg" alt="" />
+
+                <div class="styleOverlay">
+                  <h3>Men's</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
+
+              <article class="styleItem visual" data-category="men's">
+                <img src="assets/img/style-09.jpg" alt="" />
+
+                <div class="styleOverlay">
+                  <h3>Men's</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
+
+              <article class="styleItem visual" data-category="men's">
+                <img src="assets/img/style-10.jpg" alt="" />
+
+                <div class="styleOverlay">
+                  <h3>Men's</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
+
+              <article class="styleItem visual" data-category="men's">
+                <img src="assets/img/style-11.jpg" alt="" />
+
+                <div class="styleOverlay">
+                  <h3>Men's</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
+
+              <article class="styleItem visual" data-category="long">
+                <img src="assets/img/style-12.jpg" alt="" />
+
+                <div class="styleOverlay">
+                  <h3>Long</h3>
+                  <p>Cut + Color</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
-    <footer class="footer containerLg">
-      <div class="footerTop">
-        <div class="footerMain">
-          <a href="/" class="footerLogo">
-            <h2>SEN</h2>
-            <span class="logoSub">HAIR SALON</span>
-          </a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footerBrand">
+        <a href="/" class="logo">
+          <span class="logoTitle">SEN</span>
+          <span class="logoSub">HAIR SALON</span>
+        </a>
+      </div>
 
-          <div class="instagramContent">
-            <div class="instagramInfo">
-              <p>Follow us on Instagram</p>
-              <p>@sen_hairsalon</p>
-            </div>
+      <nav class="footerNav">
+        <ul>
+          <!-- 以下はきれいに書き直す -->
+          <li><a href="/">HOME</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/menu.html">MENU</a></li>
+          <li><a href="/style.html">STYLE</a></li>
+          <li><a href="/access.html">ACCESS</a></li>
+        </ul>
+      </nav>
 
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="instagramIcon"
-            >
+      <div class="footerContact">
+        <p class="footerHeading">FOLLOW US</p>
+
+        <ul class="snsList">
+          <li>
+            <a href="">
               <svg
+                class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
                 viewBox="0 0 24 24"
               >
-                <path d="M0 0h24v24H0z" fill="none" />
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
+                <g fill="none">
                   <path
-                    d="M3 12c0-4.243 0-6.364 1.318-7.682S7.758 3 12 3s6.364 0 7.682 1.318S21 7.758 21 12s0 6.364-1.318 7.682S16.242 21 12 21s-6.364 0-7.682-1.318S3 16.242 3 12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
                   />
-                  <path
-                    d="M16 12a4 4 0 1 1-8 0a4 4 0 0 1 8 0m1.375-5.25h-.125m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0"
+                  <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="2"
                   />
                 </g>
               </svg>
             </a>
-          </div>
-        </div>
+          </li>
+          <li>
+            <a href="">
+              <svg
+                class="snsIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M18.664 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.463a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.526.526 0 0 1-.002 1.05h-1.463v.938h1.463c.29 0 .524.237.524.525m-4.098 2.485a.5.5 0 0 1-.166.025a.52.52 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.52.52 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525c.287 0 .525.238.525.525v3.976a.52.52 0 0 1-.36.497m-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.235-.525.525-.525c.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524m-1.53 0H6.099a.53.53 0 0 1-.525-.524V8.852c0-.287.238-.525.525-.525c.29 0 .525.238.525.525v3.45h1.464a.525.525 0 0 1 0 1.05m3.915-10.78c-5.513 0-10 3.643-10 8.118c0 4.01 3.558 7.369 8.363 8.007c.325.068.769.215.881.492c.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537c1.076-.449 5.764-3.398 7.864-5.812C21.314 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
 
-        <div class="instagramGallery">
-          <img
-            src="assets/img/footerVisual01.webp"
-            alt="サロンのインテリア写真"
-          />
-          <img
-            src="assets/img/footerVisual02.webp"
-            alt="サロンのインテリア写真"
-          />
-          <img
-            src="assets/img/footerVisual03.webp"
-            alt="サロンのインテリア写真"
-          />
-          <img
-            src="assets/img/footerVisual04.webp"
-            alt="サロンのインテリア写真"
-          />
-          <img
-            src="assets/img/footerVisual05.webp"
-            alt="サロンのインテリア写真"
-          />
-        </div>
-      </div>
-
-      <div class="footerBottom">
-        <a href="/privacy.html">プライバシーポリシー</a>
-        <a href="/recruit.html">採用情報</a>
-        <a href="/faq.html">よくある質問</a>
+        <ul class="footerSubNav">
+          <li><a href="/privacy.html">プライバシーポリシー</a></li>
+          <li><a href="/recruit.html">採用情報</a></li>
+          <li><a href="/faq.html">よくある質問</a></li>
+        </ul>
 
         <small>© 2026 SEN HAIR SALON.</small>
       </div>
     </footer>
-    <script src="/js/hamburger.js"></script>
-    <script src="/js/category.js"></script>
+    <script src="js/drawer.js"></script>
+    <script src="js/category.js"></script>
   </body>
 </html>
