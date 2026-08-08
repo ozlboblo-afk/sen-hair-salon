@@ -7,7 +7,7 @@
     <title>STYLE｜SEN HAIR SALON</title>
     <meta
       name="description"
-      content="SEN HAIR SALONは、落ち着いた上質な空間で一人ひとりに寄り添うヘアデザインをご提案する美容室です。"
+      content="SEN HAIR SALONのヘアスタイルをご紹介します。ショート、ボブ、ミディアム、ロングなど、さまざまなスタイルをご覧いただけます。"
     />
 
     <link rel="stylesheet" href="style/style.css" />
@@ -35,14 +35,14 @@
         class="drawerButton"
         aria-label="メニュー"
         aria-expanded="false"
-        aria-controls="sidebar"
+        aria-controls="headerMenu"
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <div class="headerMenu">
+      <div class="headerMenu" id="headerMenu">
         <nav class="globalNav">
           <ul>
             <li><a href="/">HOME</a></li>
@@ -53,17 +53,15 @@
           </ul>
         </nav>
 
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btnReserve"
-        >
+        <a href="/coming-soon.html" class="btnReserve">
           <span class="btnReserveLabel">RESERVE</span>
           <span class="btnReserveArrow"></span>
         </a>
       </div>
     </header>
+
+    <!-- 背景 -->
+    <div class="drawerOverlay"></div>
 
     <main class="page stylePage">
       <div class="pageInner container-xl">
@@ -94,7 +92,7 @@
 
             <div class="styleGrid">
               <article class="styleItem visual" data-category="long">
-                <img src="assets/img/style-01.jpg" alt="" />
+                <img src="assets/img/style-01.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Long</h3>
@@ -103,7 +101,7 @@
               </article>
 
               <article class="styleItem visual" data-category="short">
-                <img src="assets/img/style-02.jpg" alt="" />
+                <img src="assets/img/style-02.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>short</h3>
@@ -112,7 +110,7 @@
               </article>
 
               <article class="styleItem visual" data-category="short">
-                <img src="assets/img/style-03.jpg" alt="" />
+                <img src="assets/img/style-03.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>short</h3>
@@ -121,7 +119,7 @@
               </article>
 
               <article class="styleItem visual" data-category="bob">
-                <img src="assets/img/style-04.jpg" alt="" />
+                <img src="assets/img/style-04.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Bob</h3>
@@ -130,7 +128,7 @@
               </article>
 
               <article class="styleItem visual" data-category="medium">
-                <img src="assets/img/style-05.jpg" alt="" />
+                <img src="assets/img/style-05.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Medium</h3>
@@ -139,7 +137,7 @@
               </article>
 
               <article class="styleItem visual" data-category="short">
-                <img src="assets/img/style-06.jpg" alt="" />
+                <img src="assets/img/style-06.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>short</h3>
@@ -148,7 +146,7 @@
               </article>
 
               <article class="styleItem visual" data-category="medium">
-                <img src="assets/img/style-07.jpg" alt="" />
+                <img src="assets/img/style-07.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Medium</h3>
@@ -157,7 +155,7 @@
               </article>
 
               <article class="styleItem visual" data-category="men's">
-                <img src="assets/img/style-08.jpg" alt="" />
+                <img src="assets/img/style-08.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Men's</h3>
@@ -166,7 +164,7 @@
               </article>
 
               <article class="styleItem visual" data-category="men's">
-                <img src="assets/img/style-09.jpg" alt="" />
+                <img src="assets/img/style-09.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Men's</h3>
@@ -175,7 +173,7 @@
               </article>
 
               <article class="styleItem visual" data-category="men's">
-                <img src="assets/img/style-10.jpg" alt="" />
+                <img src="assets/img/style-10.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Men's</h3>
@@ -184,7 +182,7 @@
               </article>
 
               <article class="styleItem visual" data-category="men's">
-                <img src="assets/img/style-11.jpg" alt="" />
+                <img src="assets/img/style-11.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Men's</h3>
@@ -193,7 +191,7 @@
               </article>
 
               <article class="styleItem visual" data-category="long">
-                <img src="assets/img/style-12.jpg" alt="" />
+                <img src="assets/img/style-12.webp" alt="" />
 
                 <div class="styleOverlay">
                   <h3>Long</h3>
@@ -217,7 +215,6 @@
 
       <nav class="footerNav">
         <ul>
-          <!-- 以下はきれいに書き直す -->
           <li><a href="/">HOME</a></li>
           <li><a href="/about.html">ABOUT</a></li>
           <li><a href="/menu.html">MENU</a></li>
@@ -231,7 +228,7 @@
 
         <ul class="snsList">
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -255,8 +252,9 @@
               </svg>
             </a>
           </li>
+
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -282,5 +280,6 @@
     </footer>
     <script src="js/drawer.js"></script>
     <script src="js/category.js"></script>
+    <script src="js/headerScroll.js"></script>
   </body>
 </html>

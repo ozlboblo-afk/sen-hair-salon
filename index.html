@@ -50,14 +50,14 @@
           class="drawerButton"
           aria-label="メニュー"
           aria-expanded="false"
-          aria-controls="sidebar"
+          aria-controls="headerMenu"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <div class="headerMenu">
+        <div class="headerMenu" id="headerMenu">
           <nav class="globalNav">
             <ul>
               <li><a href="/">HOME</a></li>
@@ -68,12 +68,7 @@
             </ul>
           </nav>
 
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btnReserve"
-          >
+          <a href="/coming-soon.html" class="btnReserve">
             <span class="btnReserveLabel">RESERVE</span>
             <span class="btnReserveArrow"></span>
           </a>
@@ -84,10 +79,26 @@
       <div class="drawerOverlay"></div>
 
       <!-- Hero -->
-      <section class="hero">
-        <picture class="visual heroImg">
-          <img src="assets/img/hero-01.jpg" alt="ヒーロー画像" />
-        </picture>
+      <section class="hero swiper heroSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture class="visual heroImg">
+              <img src="assets/img/hero-01.webp" alt="ヒーロー画像" />
+            </picture>
+          </div>
+
+          <div class="swiper-slide">
+            <picture class="visual heroImg">
+              <img src="assets/img/hero-02.webp" alt="ヒーロー画像" />
+            </picture>
+          </div>
+
+          <div class="swiper-slide">
+            <picture class="visual heroImg">
+              <img src="assets/img/hero-03.webp" alt="ヒーロー画像" />
+            </picture>
+          </div>
+        </div>
 
         <div class="heroContent">
           <h2 class="heroTitle">
@@ -105,7 +116,7 @@
       <!-- About -->
       <section class="about">
         <div class="visual aboutImg">
-          <img src="assets/img/about-left.jpg" alt="サロン店内" />
+          <img src="assets/img/about-left.webp" alt="サロン店内" />
         </div>
 
         <div class="aboutContent">
@@ -114,7 +125,7 @@
             一人ひとりに寄り添い、ライフスタイルに合わせたヘアデザインをご提案します。落ち着いた空間で、特別なサロンタイムをお過ごしください。
           </p>
 
-          <a href="" class="link linkAbout">
+          <a href="/about.html" class="link linkAbout">
             <span class="linkLabel">ABOUT</span>
             <span class="linkArrow"></span>
           </a>
@@ -266,7 +277,7 @@
         <div class="serviceContents">
           <article class="servicePanel active" data-panel="cut">
             <div class="visual servicePanelImg">
-              <img src="assets/img/service-cut.jpg" alt="カット画像" />
+              <img src="assets/img/service-cut.webp" alt="カット画像" />
             </div>
 
             <div class="servicePanelContent">
@@ -280,13 +291,13 @@
             </div>
 
             <div class="visual servicePanelSubImage">
-              <img src="assets/img/service-cut-sub.jpg" alt="カットイメージ" />
+              <img src="assets/img/service-cut-sub.webp" alt="カットイメージ" />
             </div>
           </article>
 
           <article class="servicePanel" data-panel="color">
             <div class="visual servicePanelImg">
-              <img src="assets/img/service-color.jpg" alt="カラー施術画像" />
+              <img src="assets/img/service-color.webp" alt="カラー施術画像" />
             </div>
 
             <div class="servicePanelContent">
@@ -303,7 +314,7 @@
 
             <div class="visual servicePanelSubImage">
               <img
-                src="assets/img/service-color-sub.jpg"
+                src="assets/img/service-color-sub.webp"
                 alt="カラーイメージ"
               />
             </div>
@@ -311,7 +322,7 @@
 
           <article class="servicePanel" data-panel="perm">
             <div class="visual servicePanelImg">
-              <img src="assets/img/service-perm.jpg" alt="パーマ施術画像" />
+              <img src="assets/img/service-perm.webp" alt="パーマ施術画像" />
             </div>
 
             <div class="servicePanelContent">
@@ -327,14 +338,17 @@
             </div>
 
             <div class="visual servicePanelSubImage">
-              <img src="assets/img/service-perm-sub.jpg" alt="パーマイメージ" />
+              <img
+                src="assets/img/service-perm-sub.webp"
+                alt="パーマイメージ"
+              />
             </div>
           </article>
 
           <article class="servicePanel" data-panel="treatment">
             <div class="visual servicePanelImg">
               <img
-                src="assets/img/service-treatment.jpg"
+                src="assets/img/service-treatment.webp"
                 alt="トリートメント施術画像"
               />
             </div>
@@ -353,7 +367,7 @@
 
             <div class="visual servicePanelSubImage">
               <img
-                src="assets/img/service-treatment-sub.jpg"
+                src="assets/img/service-treatment-sub.webp"
                 alt="トリートメントイメージ"
               />
             </div>
@@ -361,7 +375,7 @@
 
           <article class="servicePanel" data-panel="spa">
             <div class="visual servicePanelImg">
-              <img src="assets/img/service-spa.jpg" alt="ヘッドスパ施術画像" />
+              <img src="assets/img/service-spa.webp" alt="ヘッドスパ施術画像" />
             </div>
 
             <div class="servicePanelContent">
@@ -378,11 +392,16 @@
 
             <div class="visual servicePanelSubImage">
               <img
-                src="assets/img/service-spa-sub.jpg"
+                src="assets/img/service-spa-sub.webp"
                 alt="ヘッドスパイメージ"
               />
             </div>
           </article>
+
+          <a href="/menu.html" class="link linkService">
+            <span class="linkLabel">VIEW MENU</span>
+            <span class="linkArrow"></span>
+          </a>
         </div>
       </section>
 
@@ -394,7 +413,7 @@
             <p class="sectionSub">スタイルギャラリー</p>
           </div>
 
-          <a href="" class="link linkPlain">
+          <a href="/style.html" class="link linkPlain">
             <span class="linkLabel">VIEW MORE</span>
             <span class="linkArrow"></span>
           </a>
@@ -403,25 +422,25 @@
         <ul class="styleGrid">
           <li>
             <div class="visual">
-              <img src="assets/img/style-01.jpg" alt="" />
+              <img src="assets/img/style-01.webp" alt="" />
             </div>
           </li>
 
           <li>
             <div class="visual">
-              <img src="assets/img/style-06.jpg" alt="" />
+              <img src="assets/img/style-06.webp" alt="" />
             </div>
           </li>
 
           <li>
             <div class="visual">
-              <img src="assets/img/style-04.jpg" alt="" />
+              <img src="assets/img/style-04.webp" alt="" />
             </div>
           </li>
 
           <li>
             <div class="visual">
-              <img src="assets/img/style-11.jpg" alt="" />
+              <img src="assets/img/style-11.webp" alt="" />
             </div>
           </li>
         </ul>
@@ -454,7 +473,7 @@
         </div>
 
         <div class="visual newsVisual">
-          <img src="assets/img/news.jpg" />
+          <img src="assets/img/news.webp" />
         </div>
       </section>
 
@@ -466,7 +485,7 @@
             <p class="sectionSub">アクセス</p>
           </div>
 
-          <a href="" class="link linkPlain">
+          <a href="/access.html" class="link linkPlain">
             <span class="linkLabel">VIEW DETAILS</span>
             <span class="linkArrow"></span>
           </a>
@@ -492,7 +511,7 @@
           <p class="reserveCtaText">WEB予約は24時間受け付けております。</p>
 
           <a
-            href="#"
+            href="/coming-soon.html"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btnPrimary"
@@ -514,7 +533,6 @@
 
       <nav class="footerNav">
         <ul>
-          <!-- 以下はきれいに書き直す -->
           <li><a href="/">HOME</a></li>
           <li><a href="/about.html">ABOUT</a></li>
           <li><a href="/menu.html">MENU</a></li>
@@ -528,7 +546,7 @@
 
         <ul class="snsList">
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -553,7 +571,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -582,5 +600,7 @@
     <script src="js/servicePanel.js"></script>
     <script src="js/drawer.js"></script>
     <script src="js/swiper.js"></script>
+    <script src="js/headerScroll.js"></script>
+    <script src="js/hero.js"></script>
   </body>
 </html>

@@ -7,13 +7,13 @@
     <title>MENU｜SEN HAIR SALON</title>
     <meta
       name="description"
-      content="SEN HAIR SALONは、落ち着いた上質な空間で一人ひとりに寄り添うヘアデザインをご提案する美容室です。"
+      content="SEN HAIR SALONのメニューをご案内します。カット、カラー、パーマ、トリートメント、ヘッドスパなどの施術内容と料金をご覧いただけます。"
     />
 
     <link rel="stylesheet" href="style/style.css" />
     <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
 
-    <!-- googlefonts -->
+    <!-- googleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,14 +35,14 @@
         class="drawerButton"
         aria-label="メニュー"
         aria-expanded="false"
-        aria-controls="sidebar"
+        aria-controls="headerMenu"
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <div class="headerMenu">
+      <div class="headerMenu" id="headerMenu">
         <nav class="globalNav">
           <ul>
             <li><a href="/">HOME</a></li>
@@ -53,12 +53,7 @@
           </ul>
         </nav>
 
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btnReserve"
-        >
+        <a href="/coming-soon.html" class="btnReserve">
           <span class="btnReserveLabel">RESERVE</span>
           <span class="btnReserveArrow"></span>
         </a>
@@ -95,7 +90,7 @@
       </section>
 
       <!-- COLOR -->
-      <section class="menuSection">
+      <section class="menuSection container-md">
         <div class="sectionHeader">
           <h2 class="sectionTitle">COLOR</h2>
           <p class="sectionSub">カラー</p>
@@ -115,7 +110,7 @@
       </section>
 
       <!-- PERM -->
-      <section class="menuSection">
+      <section class="menuSection container-md">
         <div class="sectionHeader">
           <h2 class="sectionTitle">PERM</h2>
           <p class="sectionSub">パーマ</p>
@@ -147,7 +142,7 @@
             <p>¥12,100〜</p>
 
             <img
-              src="assets/img/service-cut-sub.jpg"
+              src="assets/img/service-cut-sub.webp"
               alt=""
               aria-hidden="true"
               class="setCardImage"
@@ -159,7 +154,7 @@
             <p>¥12,100〜</p>
 
             <img
-              src="assets/img/service-perm-sub.jpg"
+              src="assets/img/service-perm-sub.webp"
               alt=""
               aria-hidden="true"
               class="setCardImage"
@@ -171,7 +166,7 @@
             <p>¥15,400〜</p>
 
             <img
-              src="assets/img/service-treatment-sub.jpg"
+              src="assets/img/service-treatment-sub.webp"
               alt=""
               aria-hidden="true"
               class="setCardImage"
@@ -217,7 +212,6 @@
 
       <nav class="footerNav">
         <ul>
-          <!-- 以下はきれいに書き直す -->
           <li><a href="/">HOME</a></li>
           <li><a href="/about.html">ABOUT</a></li>
           <li><a href="/menu.html">MENU</a></li>
@@ -231,7 +225,7 @@
 
         <ul class="snsList">
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -256,7 +250,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -281,5 +275,6 @@
       </div>
     </footer>
     <script src="js/drawer.js"></script>
+    <script src="js/headerScroll.js"></script>
   </body>
 </html>

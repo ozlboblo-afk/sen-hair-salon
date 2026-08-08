@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>404｜SEN HAIR SALON</title>
+    <meta
+      name="description"
+      content="お探しのページが見つかりませんでした。SEN HAIR SALONのトップページから目的のページをお探しください。"
+    />
+
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+
+    <!-- googleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#181716" />
+  </head>
+
+  <body class="simplePage">
+    <!-- Header -->
+    <header class="header">
+      <a href="/" class="logo">
+        <h1 class="logoTitle">SEN</h1>
+        <span class="logoSub">HAIR SALON</span>
+      </a>
+
+      <button
+        class="drawerButton"
+        aria-label="メニュー"
+        aria-expanded="false"
+        aria-controls="headerMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="headerMenu" id="headerMenu">
+        <nav class="globalNav">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about.html">ABOUT</a></li>
+            <li><a href="/menu.html">MENU</a></li>
+            <li><a href="/style.html">STYLE</a></li>
+            <li><a href="/access.html">ACCESS</a></li>
+          </ul>
+        </nav>
+
+        <a href="/coming-soon.html" class="btnReserve">
+          <span class="btnReserveLabel">RESERVE</span>
+          <span class="btnReserveArrow"></span>
+        </a>
+      </div>
+    </header>
+
+    <!-- 背景 -->
+    <div class="drawerOverlay"></div>
+
+    <main>
+      <div class="simplePageInner container-sm">
+        <h1 class="simplePageTitle">404</h1>
+
+        <div class="simplePageLine"></div>
+
+        <p class="simplePageLead">
+          お探しのページは
+          <br />
+          見つかりませんでした。
+        </p>
+
+        <p class="simplePageText">Page Not Found</p>
+
+        <a href="/" class="link linkSimplePage">
+          <span class="linkLabel">BACK TO HOME</span>
+          <span class="linkArrow"></span>
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <small>© 2026 SEN HAIR SALON.</small>
+    </footer>
+    <script src="/js/hamburger.js"></script>
+    <script src="js/headerScroll.js"></script>
+  </body>
+</html>

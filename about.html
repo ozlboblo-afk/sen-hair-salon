@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>SALON｜SEN HAIR SALON</title>
+    <title>ABOUT｜SEN HAIR SALON</title>
     <meta
       name="description"
       content="SEN HAIR SALONは、落ち着いた上質な空間で一人ひとりに寄り添うヘアデザインをご提案する美容室です。"
@@ -35,14 +35,14 @@
         class="drawerButton"
         aria-label="メニュー"
         aria-expanded="false"
-        aria-controls="sidebar"
+        aria-controls="headerMenu"
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <div class="headerMenu">
+      <div class="headerMenu" id="headerMenu">
         <nav class="globalNav">
           <ul>
             <li><a href="/">HOME</a></li>
@@ -53,12 +53,7 @@
           </ul>
         </nav>
 
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btnReserve"
-        >
+        <a href="/coming-soon.html" class="btnReserve">
           <span class="btnReserveLabel">RESERVE</span>
           <span class="btnReserveArrow"></span>
         </a>
@@ -92,7 +87,7 @@
       <!-- Salon -->
       <section class="aboutSalon">
         <div class="visual aboutSalonImg">
-          <img src="assets/img/about-bg.jpg" alt="サロン内観" />
+          <img src="assets/img/about-salon-bg.webp" alt="サロン内観" />
         </div>
 
         <div class="aboutSalonContent">
@@ -165,7 +160,7 @@
         </div>
 
         <div class="visual aboutStylistImg">
-          <img src="assets/img/about-bg.jpg" alt="スタイリスト" />
+          <img src="assets/img/about-stylist-bg.webp" alt="スタイリスト" />
         </div>
       </section>
 
@@ -215,7 +210,6 @@
 
       <nav class="footerNav">
         <ul>
-          <!-- 以下はきれいに書き直す -->
           <li><a href="/">HOME</a></li>
           <li><a href="/about.html">ABOUT</a></li>
           <li><a href="/menu.html">MENU</a></li>
@@ -229,7 +223,7 @@
 
         <ul class="snsList">
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -254,7 +248,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -279,5 +273,6 @@
       </div>
     </footer>
     <script src="js/drawer.js"></script>
+    <script src="js/headerScroll.js"></script>
   </body>
 </html>

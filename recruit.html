@@ -7,13 +7,13 @@
     <title>RECRUIT｜SEN HAIR SALON</title>
     <meta
       name="description"
-      content="SEN HAIR SALONは、落ち着いた上質な空間で一人ひとりに寄り添うヘアデザインをご提案する美容室です。"
+      content="SEN HAIR SALONの採用情報をご案内します。美容師として働く環境や募集に関する情報をご確認いただけます。"
     />
 
     <link rel="stylesheet" href="style/style.css" />
     <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
 
-    <!-- googlefonts -->
+    <!-- googleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,14 +35,14 @@
         class="drawerButton"
         aria-label="メニュー"
         aria-expanded="false"
-        aria-controls="sidebar"
+        aria-controls="headerMenu"
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <div class="headerMenu">
+      <div class="headerMenu" id="headerMenu">
         <nav class="globalNav">
           <ul>
             <li><a href="/">HOME</a></li>
@@ -53,12 +53,7 @@
           </ul>
         </nav>
 
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btnReserve"
-        >
+        <a href="/coming-soon.html" class="btnReserve">
           <span class="btnReserveLabel">RESERVE</span>
           <span class="btnReserveArrow"></span>
         </a>
@@ -102,7 +97,7 @@
           </dl>
 
           <div class="recruitAction">
-            <a href="/reserve.html" class="btn btnPrimary">RESERVE</a>
+            <a href="/coming-soon.html" class="btn btnPrimary">RESERVE</a>
           </div>
         </section>
       </div>
@@ -119,7 +114,6 @@
 
       <nav class="footerNav">
         <ul>
-          <!-- 以下はきれいに書き直す -->
           <li><a href="/">HOME</a></li>
           <li><a href="/about.html">ABOUT</a></li>
           <li><a href="/menu.html">MENU</a></li>
@@ -133,7 +127,7 @@
 
         <ul class="snsList">
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -157,8 +151,9 @@
               </svg>
             </a>
           </li>
+
           <li>
-            <a href="">
+            <a href="/coming-soon.html">
               <svg
                 class="snsIcon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -183,5 +178,6 @@
       </div>
     </footer>
     <script src="/js/hamburger.js"></script>
+    <script src="js/headerScroll.js"></script>
   </body>
 </html>
