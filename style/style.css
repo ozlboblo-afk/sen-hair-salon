@@ -231,7 +231,7 @@ button {
 Layout
 ========================= */
 /* --------------------------
-index/Hero Container
+index/HeroContainer
 -------------------------- */
 .heroContainer {
   position: relative;
@@ -243,7 +243,7 @@ index/Hero Container
 /* --------------------------
 page/Header
 -------------------------- */
-/* header */
+/* page/header */
 .header {
   display: flex;
   position: fixed;
@@ -264,13 +264,13 @@ page/Header
   backdrop-filter: blur(14px);
 }
 
-/* logo */
+/* page/logo */
 .header .logo {
   padding: var(--space-lg) var(--space-2xl);
   color: var(--color-text-inverse);
 }
 
-/* drawerButton */
+/* page/drawerButton */
 .drawerButton {
   display: none;
   position: relative;
@@ -287,7 +287,7 @@ page/Header
   cursor: pointer;
 }
 
-/* 三本線 */
+/* page/三本線 */
 .drawerButton span {
   position: absolute;
   width: 24px;
@@ -303,7 +303,7 @@ page/Header
   transform: translateY(7px);
 }
 
-/* 開いたら× */
+/* page/開いたら× */
 .drawerButton.is-open span:nth-child(1) {
   transform: rotate(45deg);
 }
@@ -314,7 +314,7 @@ page/Header
   transform: rotate(-45deg);
 }
 
-/* headerLeft */
+/* page/headerMenu */
 .headerMenu {
   display: flex;
   z-index: var(--z-menu);
@@ -337,7 +337,7 @@ page/Header
   color: var(--color-text-inverse);
 }
 
-/* navの下線部 */
+/* page/navの下線部 */
 .globalNav a::after {
   position: absolute;
   bottom: -8px;
@@ -354,7 +354,7 @@ page/Header
   width: 100%;
 }
 
-/* RESERVEボタン */
+/* page/RESERVEボタン */
 .btnReserve {
   display: flex;
   flex-direction: column;
@@ -378,7 +378,7 @@ page/Header
   letter-spacing: 0.18em;
 }
 
-/* reserveBtn→ */
+/* page/reserveBtn→ */
 .btnReserveArrow {
   position: relative;
   width: 24px;
@@ -429,17 +429,27 @@ index/Hero
 -------------------------- */
 .hero {
   position: relative;
-  height: 100%;
+  height: 75svh;
 }
-/* heroのoverlay */
+
+/* index/HeroOverlay */
 .hero::before {
   position: absolute;
   z-index: var(--z-base);
 
-  background: var(--color-overlay);
-  content: "";
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.58) 0%,
+    rgba(0, 0, 0, 0.28) 25%,
+    rgba(0, 0, 0, 0.1) 55%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
   inset: 0;
+
+  content: "";
 }
+
+/* index/HeroSwiper */
 .heroSwiper {
   height: 100%;
 }
@@ -451,13 +461,17 @@ index/Hero
   height: 100%;
 }
 
-/* heroImg */
-.heroImg {
+/* index/HeroImg */
+.heroSwiper .swiper-slide img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+.heroSlideRight img {
+  object-position: 80% center;
 }
 
-/* heroContent */
+/* index/heroContent */
 .heroContent {
   position: relative;
   z-index: var(--z-base);
@@ -488,11 +502,8 @@ index/About
   display: grid;
   grid-template-columns: 36% 64%;
 }
-.aboutImg {
-  height: 100%;
-}
 
-/* aboutContent */
+/* index/aboutContent */
 .aboutContent {
   display: flex;
   position: relative;
@@ -520,7 +531,7 @@ index/About
 }
 .aboutContent > * {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-base);
 }
 .aboutContent p {
   max-width: 320px;
@@ -543,7 +554,7 @@ index/Service
   text-align: center;
 }
 
-/* serviceSwiper */
+/* index/serviceSwiper */
 .serviceSwiper {
   margin-bottom: var(--space-2xl);
   overflow: visible;
@@ -715,41 +726,24 @@ index/Service
 index/Style
 -------------------------- */
 .style {
-  display: grid;
-  align-items: start;
+  display: flex;
+  justify-content: center;
 
   gap: var(--space-xl);
   padding-block: var(--section-space);
   border-bottom: 1px solid var(--color-border-default);
-
-  grid-template-columns: 160px 1fr;
 }
-.styleHeader {
+.mainPage .styleHeader {
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
 }
-.styleGrid {
+.mainPage .styleGrid {
   display: grid;
   justify-content: center;
   gap: var(--space-lg);
 
-  max-width: var(--content-xl);
-
-  margin: auto;
-  column-gap: var(--space-lg);
-
   grid-template-columns: repeat(4, 1fr);
-}
-.styleGrid li {
-  max-width: 200px;
-  aspect-ratio: 4/5;
-}
-.styleGrid img {
-  transition: var(--transition-slow);
-}
-.styleGrid li:hover img {
-  transform: scale(1.06);
 }
 
 /* --------------------------
@@ -785,7 +779,7 @@ index/News
 /* --------------------------
 index/Access
 -------------------------- */
-.accessContent {
+.mainPage .accessContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -795,10 +789,12 @@ index/Access
   margin-inline: auto;
   padding-inline: var(--space-xl);
 }
-.accessMapWrap {
+.mainPage .accessMapWrap {
   height: 220px;
 }
 .accessMap {
+  width: 100%;
+  height: 100%;
   border: none;
 }
 
@@ -1270,16 +1266,6 @@ menu.html
 /* --------------------------
 Style.html
 -------------------------- */
-.styleContent {
-  display: grid;
-  align-items: start;
-  gap: var(--space-3xl);
-  grid-template-columns: 280px 1fr;
-}
-.styleSidebar {
-  position: sticky;
-  top: 120px;
-}
 .styleHeading {
   margin-bottom: var(--space-xl);
 
@@ -1295,7 +1281,11 @@ Style.html
   color: var(--color-text-inverse-muted);
 }
 
-/* category */
+/* styleContent */
+.styleContent {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
 .styleCategory {
   display: flex;
   flex-direction: column;
@@ -1337,24 +1327,13 @@ Style.html
 .styleCategory button.is-active::before {
   background: var(--color-primary);
 }
+
+/* styleGrid */
 .stylePage .styleGrid {
   display: grid;
-  gap: var(--space-xl);
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* item */
-.styleItem {
-  position: relative;
-  cursor: pointer;
-  transition: opacity var(--transition);
-  aspect-ratio: 3 / 4;
-}
-.styleItem img {
-  transition: transform var(--transition-slow);
-}
-.styleItem:hover img {
-  transform: scale(1.05);
+  justify-content: center;
+  gap: clamp(24px, 3vw, 48px);
+  grid-template-columns: repeat(auto-fit, 180px);
 }
 
 /* overlay */
@@ -1394,14 +1373,11 @@ Access.html
 .accessInfo {
   display: grid;
   gap: var(--space-3xl);
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 1fr 1fr;
 }
-.accessPage .accessContent {
-  display: flex;
-  flex-direction: column;
-}
-.accessHeading,
-.accessRouteTitle {
+
+/* accessHeading */
+.accessHeading {
   margin-bottom: var(--space-lg);
 
   font-size: var(--fs-caption);
@@ -1413,32 +1389,27 @@ Access.html
 }
 .accessHeading::after {
   display: block;
-
   width: 80px;
   height: 1px;
 
   margin-top: var(--space-md);
-
   background: var(--color-primary);
-
   content: "";
 }
-.accessAddress {
-  display: flex;
-  flex-direction: column;
 
-  gap: var(--space-sm);
-  margin: var(--space-xl) 0 var(--space-3xl);
-
-  font-style: normal;
+/* accessContent */
+.accessPage .accessContent {
+  grid-column: 1;
+  grid-row: 1;
 }
-.accessAddress p {
-  line-height: 1.9;
+.accessAddress {
+  margin-bottom: var(--space-xl);
+  line-height: 2.4;
+  font-style: normal;
 }
 .accessDetail {
   display: grid;
   gap: var(--space-md);
-  margin-bottom: var(--space-3xl);
 
   grid-template-columns: 80px 1fr;
 }
@@ -1447,8 +1418,11 @@ Access.html
   letter-spacing: 0.12em;
   color: var(--color-primary);
 }
-.accessDetail dd {
-  margin: 0;
+
+/* accessRouteContent */
+.accessPage .accessRouteContent {
+  grid-column: 1;
+  grid-row: 2;
 }
 .accessRoute {
   display: flex;
@@ -1473,20 +1447,18 @@ Access.html
   height: 22px;
 
   color: var(--color-primary);
-
   flex-shrink: 0;
 }
+
+/* accessMap */
 .accessPage .accessMapWrap {
   min-height: 620px;
 
   border-radius: var(--radius-xl);
   overflow: hidden;
-}
-.accessMap {
-  width: 100%;
-  height: 100%;
 
-  border: none;
+  grid-column: 2;
+  grid-row: 1 / 3;
 }
 
 /* --------------------------
@@ -1807,6 +1779,22 @@ sectionTitle
   opacity: 0.65;
 }
 
+/* --------------------------
+styleItem
+-------------------------- */
+.styleItem {
+  position: relative;
+  max-width: 180px;
+  transition: opacity var(--transition);
+  aspect-ratio: 3 / 4;
+}
+.styleItem img {
+  transition: transform var(--transition-slow);
+}
+.styleItem:hover img {
+  transform: scale(1.05);
+}
+
 /* =========================
 Utility
 ========================= */
@@ -1848,16 +1836,15 @@ Media Queries
 
 /* large tablet */
 @media (max-width: 960px) {
-  /* header */
+  /* page/drawerButton */
   .drawerButton {
     display: flex;
-    z-index: calc(var(--z-menu) + 1);
   }
+  /* page/headerMenu */
   .headerMenu {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: var(--z-menu);
 
     transform: translateX(100%);
 
@@ -1867,7 +1854,7 @@ Media Queries
 
     width: min(420px, 88vw);
     height: 100vh;
-    padding: 72px 48px;
+    padding-block: var(--space-3xl);
 
     background: var(--color-surface-drawer);
     opacity: 0;
@@ -1894,12 +1881,14 @@ Media Queries
     font-family: var(--ff-en);
     letter-spacing: 0.18em;
   }
+  /* page/RESERVEボタン */
   .btnReserve {
     flex-direction: row;
     justify-content: space-between;
 
     width: 100%;
     height: 64px;
+
     margin: 0;
     padding: 0 var(--space-lg);
   }
@@ -1908,11 +1897,8 @@ Media Queries
   .about {
     grid-template-columns: 1fr;
   }
-  .aboutImg {
+  .about .visual {
     display: none;
-  }
-  .aboutContent {
-    padding-inline: var(--space-2xl);
   }
   .aboutContent::before {
     background: linear-gradient(
@@ -1922,23 +1908,11 @@ Media Queries
       rgba(248, 243, 239, 0.88) 44%,
       var(--color-bg-subtle) 52%
     );
-    content: "";
-    inset: 0;
   }
 
   /* service */
   .servicePanel {
     height: 360px;
-  }
-
-  /* index/Style */
-  .style {
-    gap: var(--space-2xl);
-    grid-template-columns: 1fr;
-  }
-  .styleHeader {
-    flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -1973,24 +1947,18 @@ Media Queries
   }
 
   /* index/Style */
-  .styleHeader {
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-    max-width: var(--content-sm);
-
-    margin-inline: auto;
+  .style {
+    flex-direction: column;
   }
-  .styleGrid {
-    width: 100%;
-    max-width: var(--content-sm);
-    grid-template-columns: repeat(2, 1fr);
+  .mainPage .styleHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
   }
-  .styleGrid li {
-    width: 100%;
-
-    max-width: none;
+  .mainPage .styleGrid {
+    justify-content: center;
+    gap: clamp(16px, 5vw, 40px);
+    grid-template-columns: repeat(2, minmax(0, 180px));
   }
 
   /* page/footer */
@@ -2062,6 +2030,24 @@ Media Queries
   .setCard {
     padding: var(--space-xl);
   }
+
+  /* Access.html */
+  .accessInfo {
+    grid-template-columns: 1fr;
+  }
+  .accessPage .accessContent {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .accessPage .accessMapWrap {
+    min-height: 400px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .accessPage .accessRouteContent {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }
 
 @media (max-width: 580px) {
@@ -2097,17 +2083,8 @@ Media Queries
     background: var(--color-primary);
   }
 }
+
 @media (max-width: 480px) {
-  /* index/Style */
-  .styleGrid {
-    max-width: 280px;
-    grid-template-columns: 1fr;
-  }
-  .styleHeader {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-lg);
-  }
   /* footer */
   .footer {
     gap: var(--space-3xl);
@@ -2116,5 +2093,10 @@ Media Queries
       "brand"
       "nav"
       "contact";
+  }
+
+  /* stylePage */
+  .stylePage .styleGrid {
+    grid-template-columns: repeat(1, minmax(0, 180px));
   }
 }
