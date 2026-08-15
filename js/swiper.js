@@ -9,7 +9,7 @@ new Swiper(".serviceSwiper", {
   },
 
   breakpoints: {
-    581: {
+    481: {
       enabled: false,
     },
   },
